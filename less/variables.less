@@ -1,0 +1,178 @@
+/***********************************************************************/
+/* VARIABLES ==========================================================*/
+/***********************************************************************/
+
+/***********************************************************************/
+/*==== SITE COLORS ====================================================*/
+/***********************************************************************/
+/* Primary Color */
+@primary-color:#2B3570;
+@primary-color-light: #4A579E;
+@primary-color-dark: #2B3570;
+
+/* Secondary Color */
+@secondary-color: #C6383F;
+@secondary-color-light:#c13f45;
+@secondary-color-dark:#c6383f;
+@grid-gutter-width:0px;
+/* Accent Color */
+@accent-color: #DE2B34;
+@accent-color-light: #DE2B34;
+@accent-color-dark: #DE2B34;
+
+/* Success Color */
+@success-color: #28a745;
+
+/* Text Color */
+@text-color-primary: #263238;
+@text-color-secondary: #CFD8DC;
+
+/* Background Color (For page. Typically white or grey) */
+@background-color: #FAFAFA;
+@background-color-light: #FFFFFF;
+@background-color-dark: #E0E0E0;
+
+/* Gradient Colors */
+@gradient-color-dark: rgb(41, 161, 216);
+@gradient-color-light: rgb(41, 198, 216);
+
+/* Overlay Color (typically used for image overlays) */
+@overlay-color: fade(#37474F, 40%);
+
+/* Primary Font Shades */
+@light-color: #ECEFF1; // Fonts on a dark background
+@dark-color: #263238; // Fonts on a light background
+
+/* Body Color (default text color) */
+@body-color: #212529;
+
+/* Link color <a> */
+@link-color: @primary-color;
+@link-hover-color: @primary-color-dark;
+
+/* Input Place Holder Color */
+@input-placeholder-color: #bbbbbb;
+
+/* Border color */
+@border-color: #d7d7d7;
+
+/*********************************************************************/
+/*==== DEFAULT COLORS ================================================*/
+/***********************************************************************/
+/* Shades */
+@white: #ffffff;
+@grey: #808080;
+@black: #000000;
+
+/* Social Media Colors */
+@color-twitter: #00aced;
+@color-facebook: #3b5998;
+@color-pinterest: #cb2027;
+@color-linkedin: #007bb6;
+@color-youtube: #bb0000;
+@color-vimeo: #aad450;
+@color-tumblr: #32506d;
+@color-instagram: #517fa4;
+@color-flickr: #ff0084;
+@color-wordpress: #21759b;
+@color-stumbleupon: #EB4823;
+@color-soundcloud: #ff3a00;
+
+@red-light: #ed6c63;
+@red-dark: #bb2011;
+
+
+/***********************************************************************/
+/*==== TYPOGRAPHY =====================================================*/
+/***********************************************************************/
+//@font-face {
+//  font-family: 'Archer';
+//  src: url(fonts/Archer-Bold-Pro.otf) format('opentype');
+//}
+//@font-face {
+//  font-family: 'Roboto';
+//  src: url(fonts/Roboto-Light.ttf) format('truetype');
+//}
+
+/* Font families */
+// Set from fonts loading above or in ../inc/enqueue.php
+@font-heading: trumpgothicpro, sans-serif;
+@font-text: 'Montserrat', sans-serif;
+@font-light: proxima-nova, sans-serif;
+@font-btn: 'Montserrat', sans-serif;
+@font-script: 'Playfair Display', serif;
+@font-nav: @font-light;
+@font-awesome: 'Font Awesome 5 Free';
+
+/* Font Weights */
+@font-thin: 100;
+@font-normal: 300;
+@font-bold: 700;
+
+
+
+/***********************************************************************/
+/*==== PAGE MEASUREMENTS ==============================================*/
+/***********************************************************************/
+@baseline: 20px;
+@bl: @baseline;
+
+/* Header (Main navigation) */
+@header-height: 70px;
+
+/***********************************************************************/
+/*==== OTHER ==========================================================*/
+/***********************************************************************/
+@easing: all 0.2s ease-in-out;
+.container {
+  max-width: 100% !important;
+  padding: 0;
+  margin: 0;
+}
+.col-md{
+  padding: 0;
+}
+.row{
+  margin: 0;
+}
+.paddingall{
+  padding-top: 5.75rem;
+  padding-bottom: 5.75rem;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+.paddingleftright{
+  padding-left: 8%;
+  padding-right: 8%;
+}
+.paddingright{
+  padding-right: 8%;
+}
+.paddingtopbottom{
+  padding-top: 5.75rem;
+  padding-bottom: 5.75rem;
+}
+.paddingbottom{
+  padding-bottom: 5.75rem;
+}
+
+.custom-width{
+  max-width: 50%;
+  margin: auto;
+  display: block;
+
+}
+.text-primary{
+  color: @primary-color!important;
+}
+.text-grey{
+  color:#D4D9E8;
+}
+.background-primary{
+  background-color:#2B3570;
+  color: #ffffff;
+
+}
+.header-margin-bottom{
+  margin-bottom: 3rem;
+}

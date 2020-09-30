@@ -1,0 +1,688 @@
+/***********************************************************************/
+/*********** HOME PAGE / FRONT PAGE ************************************/
+/***********************************************************************/
+
+// ** LESS STYLING EXAMPLES ** [Delete when beginning project] -----------------------------------------------
+// See variables.less, mixins.less, typography.less, ui.less for global less styles. Adjust these files first so you can use them throughout your content styles
+
+#home-splash { // Name each section using a unique id. This makes it easier to target elements. Format can follow #[page-name]-[section-name]
+
+  // A SPLASH is the first section seen on a page.
+
+  .full-page(); // Makes this section fill the screen height and width. Will stretch if content is larger than screen height.
+
+  color: @primary-color;
+  font-weight: bold;
+
+  h6, p {
+	font-size: 1.3rem;
+	color: @primary-color;
+	font-weight: bold;
+  }
+
+  h5 {
+	font-size: 4rem;
+	color: @secondary-color;
+	font-weight: 900;
+  }
+
+}
+
+#home-animation-example {
+  .full-width(); // Full width & auto height
+  .section-padding(); // Adds top and bottom padding that matches each section
+  background: @primary-color; // Primary color
+  color: @secondary-color; // Secondary color
+
+  i, svg { // Targets the fontawesome icons. Could also target .fa
+	.font-size(80); // Sets font size ie. 80px
+  }
+}
+
+#home-spacing-example {
+  .full-width();
+  .section-padding();
+  .flex-row(); // Flex-box helper mix. Flex all children in a row and centers by default. Set your justify-contents as the parameter. see mixins.less
+  // Need help with flex-box? https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+  div {
+	display: block;
+	width: 200px;
+	background: @accent-color;
+	height: @baseline*4; // @baseline is 20px it will match the horizontal rows found in the design
+	.border-radius(); // Applies the default border radius
+	.box-shadow(); // Applies a box-shadow
+	.transition(); // Applies a transition. transition: all 300ms ease-in-out; Used when this elements has a hover or will have its styles changed
+	text-align: center;
+	.flex-column(); // Flex-box helper mix. Flex all children in a column and centers by default.
+	color: @white;
+
+	&:not(:last-of-type) { // Great way to add margin to a collection/list of elements and not apply to last element
+	  margin-right: @bl; // @bl is shorthand for @baseline
+	}
+
+	&:hover {
+	  .box-shadow-secondary();
+	  background: @primary-color;
+	  transform: scale(1.1);
+	  cursor: pointer;
+	}
+  }
+}
+
+// LESS STYLING EXAMPLES ends -------------------------------------------
+.complywith {
+  text-align: center;
+
+  h6 {
+	color: @primary-color;
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.5rem;
+	text-transform: initial;
+  }
+
+  img {
+	width: 50%;
+  }
+
+  .col-lg-4 {
+	text-align: center;
+	padding: 5%;
+  }
+
+}
+
+#how-it-works {
+  overflow: hidden;
+  position: relative;
+svg{
+  max-width: 100%;
+}
+  .blob-full {
+	content: "";
+	position: absolute !important;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #262F64;
+	border-radius: 50%;
+	height: 163%;
+	top: -36%;
+	margin: 0 5%;
+  }
+
+  h3 {
+	color: @primary-color-light;
+	position: absolute;
+	width: 355px;
+	top: 22%;
+  }
+
+  h4 {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #fff;
+  }
+
+  .carousel .carousel-item .row {
+	align-items: normal;
+
+	.col-lg-4:first-of-type {
+	  padding-top: 23%;
+	}
+  }
+}
+
+
+.reviews-home {
+  position: relative;
+
+  .price {
+	position: absolute;
+	text-align: center;
+	max-width: 35%;
+	margin: auto;
+	box-shadow: 10px 10px 30px #0000000D;
+	background: #fff;
+	border-radius: 5px;
+	z-index: 23;
+	display: block;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	h5 {
+	  color: #D4D9E8;
+	  font-size: 1.5rem;
+	  font-weight: bold;
+	}
+
+	h4 {
+	  color: #2B3570;
+	  font-weight: bold;
+	  font-size: 1.5rem;
+	  padding-bottom: 1rem;
+	  line-height: 1.3;
+	  padding-top: 1rem;
+	  font-weight: 900;
+	  text-transform: initial;
+	}
+
+	a {
+	  margin-top: 2rem;
+	}
+
+
+  }
+  svg#esxmtmjdocr1 {
+	width: 30%;
+	position: absolute;
+	bottom: -131px;
+	left: 24rem;
+  }
+  svg#ei33lcx4lv571{
+	width: 30%;
+	position: absolute;
+	bottom: -131px;
+	right: 24rem;
+  }
+  .carousel .carousel-item {
+	.review-content {
+	  p {
+		color: #2B3570 !important;
+	  }
+	}
+
+  }
+}
+
+#etruckshomereviewsCarousel {
+ 	min-height: 60vh;
+
+  .carousel-item {
+	.customer-name {
+	  padding-bottom: 12px;
+	}
+
+	.review-content {
+	  width: 300px;
+
+	  p {
+		font-size: 2rem;
+		font-weight: 900;
+		line-height: 1.3;
+		margin-bottom: 0;
+	  }
+
+	  p.company-name {
+		font-size: 14px;
+		font-weight: normal;
+	  }
+	}
+
+  }
+}
+
+a#topVideoShow {
+  width: 113px;
+  position: absolute;
+  right: 9%;
+  top: 5rem;
+
+  &:after {
+	content: "PLAY VIDEO";
+	position: absolute;
+	top: 178px;
+	left: 12px;
+	transform: rotate(90deg);
+	color: #C6383F;
+	font-weight: bold;
+  }
+
+}
+.feature--report.is--hit{
+  #e505taxblrfd14_to {
+	animation: e505taxblrfd14_to__to 2000ms linear 1 normal forwards;
+  }
+
+  #e505taxblrfd13 {
+	animation: e505taxblrfd13__m 2000ms linear 1 normal forwards;
+  }
+
+  #e505taxblrfd12 {
+	animation: e505taxblrfd12__m 2000ms linear 1 normal forwards;
+  }
+
+  #e505taxblrfd10_to {
+	animation: e505taxblrfd10_to__to 2000ms linear 1 normal forwards;
+  }
+
+  #e505taxblrfd9 {
+	animation: e505taxblrfd9__m 2000ms linear 1 normal forwards;
+  }
+
+  #e505taxblrfd8 {
+	animation: e505taxblrfd8__m 2000ms linear 1 normal forwards;
+  }
+
+  #e505taxblrfd6_to {
+	animation: e505taxblrfd6_to__to 2000ms linear 1 normal forwards;
+  }
+
+  #e505taxblrfd5 {
+	animation: e505taxblrfd5__m 2000ms linear 1 normal forwards;
+  }
+
+  #e505taxblrfd4 {
+	animation: e505taxblrfd4__m 2000ms linear 1 normal forwards;
+  }
+}
+.col-lg-4.protection{
+  &:hover #eo3y1vscop8m3_to {
+	animation: eo3y1vscop8m3_to__to 2000ms linear 1s normal forwards;
+  }
+  &:hover #eo3y1vscop8m8 {animation: eo3y1vscop8m8__m 2000ms linear 1s normal forwards;}
+  &:hover #eo3y1vscop8m6 {animation: eo3y1vscop8m6_c_o 2000ms linear 1s normal forwards;}
+
+  &:hover #eo3y1vscop8m7 {
+	animation: eo3y1vscop8m7__m 2000ms linear 1s normal forwards;
+  }
+}
+.feature--protection.is--hit {
+  #eo3y1vscop8m3_to {
+	animation: eo3y1vscop8m3_to__to 2000ms linear 1s normal forwards;
+  }
+  #eo3y1vscop8m8 {animation: eo3y1vscop8m8__m 2000ms linear 1s normal forwards;}
+  #eo3y1vscop8m6 {animation: eo3y1vscop8m6_c_o 2000ms linear 1s normal forwards}
+
+  #eo3y1vscop8m7 {
+	animation: eo3y1vscop8m7__m 2000ms linear 1s normal forwards;
+  }
+}
+
+
+.report{
+  &:hover #e505taxblrfd14_to {
+	animation: e505taxblrfd14_to__to 2000ms linear 1 normal forwards;
+  }
+
+  &:hover #e505taxblrfd13 {
+	animation: e505taxblrfd13__m 2000ms linear 1 normal forwards;
+  }
+
+  &:hover #e505taxblrfd12 {
+	animation: e505taxblrfd12__m 2000ms linear 1 normal forwards;
+  }
+
+  &:hover #e505taxblrfd10_to {
+	animation: e505taxblrfd10_to__to 2000ms linear 1 normal forwards;
+  }
+
+  &:hover #e505taxblrfd9 {
+	animation: e505taxblrfd9__m 2000ms linear 1 normal forwards;
+  }
+
+  &:hover #e505taxblrfd8 {
+	animation: e505taxblrfd8__m 2000ms linear 1 normal forwards;
+  }
+
+  &:hover #e505taxblrfd6_to {
+	animation: e505taxblrfd6_to__to 2000ms linear 1 normal forwards;
+  }
+
+  &:hover #e505taxblrfd5 {
+	animation: e505taxblrfd5__m 2000ms linear 1 normal forwards;
+  }
+
+  &:hover #e505taxblrfd4 {
+	animation: e505taxblrfd4__m 2000ms linear 1 normal forwards;
+  }
+}
+.feature--clock.is--hit {
+  #eyowi2lr252q2_to {
+	animation: eyowi2lr252q2_to__to 2000ms linear 1 normal forwards
+  }
+
+  #eyowi2lr252q8_tr {
+	animation: eyowi2lr252q8_tr__tr 2000ms linear 1 normal forwards
+  }
+
+  #eyowi2lr252q12_tr {
+	animation: eyowi2lr252q12_tr__tr 2000ms linear 1 normal forwards
+  }
+}
+
+.clock {
+  &:hover #eyowi2lr252q2_to {
+	animation: eyowi2lr252q2_to__to 2000ms linear 1 normal forwards
+  }
+
+  &:hover #eyowi2lr252q8_tr {
+	animation: eyowi2lr252q8_tr__tr 2000ms linear 1 normal forwards
+  }
+
+  &:hover #eyowi2lr252q12_tr {
+	animation: eyowi2lr252q12_tr__tr 2000ms linear 1 normal forwards
+  }
+}
+
+
+
+#e6gfx04o14q91:hover #e6gfx04o14q93_ts {
+  animation: e6gfx04o14q93_ts__ts 500ms linear 1 normal forwards;}
+
+
+.svg--badge,.svg-report,.svg-clock{
+
+  height: 150px;
+}
+.feature--truck-price.is--hit {
+  #esxmtmjdocr3_to {
+	animation: esxmtmjdocr3_to__to 2000ms linear 1 normal forwards;
+  }
+
+  #esxmtmjdocr25_to {
+	animation: esxmtmjdocr25_to__to 2000ms linear 1 normal forwards;
+  }
+
+  #ei33lcx4lv573_to {
+	animation: ei33lcx4lv573_to__to 2000ms linear 1 normal forwards;
+  }
+
+  #ei33lcx4lv5716_to {
+	animation: ei33lcx4lv5716_to__to 2000ms linear 1 normal forwards;
+  }
+
+#ei33lcx4lv5716 {
+	animation: ei33lcx4lv5716_c_o 2000ms linear 1 normal forwards
+  }
+#ei33lcx4lv5768_to {
+	animation: ei33lcx4lv5768_to__to 2000ms linear 1 normal forwards
+  }
+
+  #ei33lcx4lv5768 {
+	animation: ei33lcx4lv5768_c_o 2000ms linear 1 normal forwards;
+  }
+
+  #ei33lcx4lv5773 {
+	animation: ei33lcx4lv5773__m 2000ms linear 1 normal forwards;
+  }
+
+  #ei33lcx4lv5776 {
+	animation: ei33lcx4lv5776__m 2000ms linear 1 normal forwards;
+  }
+}
+
+//************************
+//How it works svg styling
+.equipment-svg {
+  .a {
+	fill: #f6f6f6;
+  }
+
+  .b {
+	fill: #fbfbfb;
+	stroke: #dcdcdc;
+  }
+
+  .c {
+	fill: #ededed;
+	stroke: #d0d0d0;
+  }
+
+  .d {
+	clip-path: url(#c);
+  }
+
+  .e, .n {
+	fill: #fff;
+  }
+
+  .f, .j {
+	fill: #c6383f;
+  }
+
+  .g, .i, .l, .m, .o {
+	fill: #2b3570;
+  }
+
+  .h, .k {
+	fill: #333;
+  }
+
+  .h {
+	font-size: 17px;
+  }
+
+  .h, .i, .j, .k, .n {
+	font-family: Montserrat-Bold,
+	Montserrat;
+	font-weight: 700;
+  }
+
+  .i, .j, .o {
+	font-size: 8px;
+  }
+
+  .k {
+	font-size: 6px;
+  }
+
+  .l, .m, .o {
+	font-family: Montserrat-Regular,
+	Montserrat;
+  }
+
+  .l {
+	font-weight: 400;
+  }
+
+  .m, .n {
+	font-size: 7px;
+  }
+
+  .p {
+	fill: #c8c8c8;
+  }
+
+  .q {
+	stroke: none;
+  }
+
+  .r {
+	fill: none;
+  }
+
+  .s {
+	filter: url(#a);
+  }
+}
+.mileage-svg{
+  .a {
+	fill: #f6f6f6;
+  }
+
+  .b {
+	fill: #fbfbfb;
+	stroke: #dcdcdc;
+  }
+
+  .c {
+	fill: #ededed;
+	stroke: #d0d0d0;
+  }
+
+  .d {
+	clip-path: url(#c);
+  }
+
+  .e, .n {
+	fill: #fff;
+  }
+
+  .f, .j {
+	fill: #c6383f;
+  }
+
+  .g, .i, .l, .m, .o, .p {
+	fill: #2b3570;
+  }
+
+  .h, .k {
+	fill: #333;
+  }
+
+  .h {
+	font-size: 17px;
+  }
+
+  .h, .i, .j, .k, .n {
+	font-family: Montserrat-Bold,
+	Montserrat;
+	font-weight: 700;
+  }
+
+  .i, .j, .n, .o {
+	font-size: 8px;
+  }
+
+  .k {
+	font-size: 6px;
+  }
+
+  .l, .m, .o, .p {
+	font-family: Montserrat-Regular,
+	Montserrat;
+  }
+
+  .l {
+	font-weight: 400;
+  }
+
+  .m {
+	font-size: 7px;
+  }
+
+  .p {
+	font-size: 9px;
+  }
+
+  .q {
+	fill: #c8c8c8;
+  }
+
+  .r {
+	stroke: none;
+  }
+
+  .s {
+	fill: none;
+  }
+
+  .t {
+	filter: url(#a);
+  }
+}
+.fuel-svg{
+  .a {
+	fill: #f6f6f6;
+  }
+
+  .b {
+	fill: #fbfbfb;
+	stroke: #dcdcdc;
+  }
+
+  .c {
+	fill: #ededed;
+	stroke: #d0d0d0;
+  }
+
+  .d {
+	clip-path: url(#c);
+  }
+
+  .e, .n {
+	fill: #fff;
+  }
+
+  .f, .j {
+	fill: #c6383f;
+  }
+
+  .g, .i, .l, .m, .o, .p {
+	fill: #2b3570;
+  }
+
+  .h, .k {
+	fill: #333;
+  }
+
+  .h {
+	font-size: 17px;
+  }
+
+  .h, .i, .j, .k, .n {
+	font-family: Montserrat-Bold,
+	Montserrat;
+	font-weight: 700;
+  }
+
+  .i, .j, .n, .o {
+	font-size: 8px;
+  }
+
+  .k {
+	font-size: 6px;
+  }
+
+  .l, .m, .o, .p {
+	font-family: Montserrat-Regular,
+	Montserrat;
+  }
+
+  .l {
+	font-weight: 400;
+  }
+
+  .m {
+	font-size: 7px;
+  }
+
+  .p {
+	font-size: 9px;
+  }
+
+  .q {
+	fill: #c8c8c8;
+  }
+
+  .r {
+	stroke: none;
+  }
+
+  .s {
+	fill: none;
+  }
+
+  .t {
+	filter: url(#a);
+  }
+}
+#how-it-works2{
+  .a{fill:#f6f6f6;}.b{fill:#fbfbfb;stroke:#dcdcdc;}.c{fill:#ededed;stroke:#d0d0d0;}.d{clip-path:url(#c);}.e,.n{fill:#fff;}.f,.j{fill:#c6383f;}.g,.i,.l,.m,.o,.p{fill:#2b3570;}.h,.k{fill:#333;}.h{font-size:17px;}.h,.i,.j,.k,.n{font-family:Montserrat-Bold,
+Montserrat;font-weight:700;}.i,.j,.n,.o{font-size:8px;}.k{font-size:6px;}.l,.m,.o,.p{font-family:Montserrat-Regular,
+Montserrat;}.l{font-weight:400;}.m{font-size:7px;}.p{font-size:9px;}.q{fill:#c8c8c8;}.r{stroke:none;}.s{fill:none;}.t{filter:url(#a2);}
+}
+#how-it-works3{
+  .a{fill:#f6f6f6;}.b{fill:#fbfbfb;stroke:#dcdcdc;}.c{fill:#ededed;stroke:#d0d0d0;}.d{clip-path:url(#c);}.e,.n{fill:#fff;}.f,.j{fill:#c6383f;}.g,.i,.l,.m,.o,.p{fill:#2b3570;}.h,.k{fill:#333;}.h{font-size:17px;}.h,.i,.j,.k,.n{font-family:Montserrat-Bold,
+Montserrat;font-weight:700;}.i,.j,.n,.o{font-size:8px;}.k{font-size:6px;}.l,.m,.o,.p{font-family:Montserrat-Regular,
+Montserrat;}.l{font-weight:400;}.m{font-size:7px;}.p{font-size:9px;}.q{fill:#c8c8c8;}.r{stroke:none;}.s{fill:none;}.t{filter:url(#a);}
+}
+
+#how-it-works1{
+  .a{fill:#f6f6f6;}.b{fill:#fbfbfb;stroke:#dcdcdc;}.c{fill:#ededed;stroke:#d0d0d0;}.d{clip-path:url(#c);}.e,.n{fill:#fff;}.f,.j{fill:#c6383f;}.g,.i,.l,.m,.o{fill:#2b3570;}.h,.k{fill:#333;}.h{font-size:17px;}.h,.i,.j,.k,.n{font-family:Montserrat-Bold,
+Montserrat;font-weight:700;}.i,.j,.o{font-size:8px;}.k{font-size:6px;}.l,.m,.o{font-family:Montserrat-Regular,
+Montserrat;}.l{font-weight:400;}.m,.n{font-size:7px;}.p{fill:#c8c8c8;}.q{stroke:none;}.r{fill:none;}.s{filter:url(#a);}
+}

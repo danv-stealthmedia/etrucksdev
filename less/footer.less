@@ -1,0 +1,27 @@
+/***********************************************************************/
+/* FOOTER
+/*
+/* Footer styles.
+/***********************************************************************/
+
+footer {
+  .full-width();
+  padding: @baseline 0;
+  .font-size(12);
+  color: #939EB2;
+  padding-bottom: 0;
+  div.socials,.copyright,.stealth{
+	padding-bottom: 2rem;
+  }
+  .fab{
+	&:before {
+	  color: #939EB2;
+	  font-size: 33px;
+	  padding: 10px;
+	  transition: 1s all;
+	}
+	&:hover:before{
+	  color: @primary-color;
+	}
+  }
+}
