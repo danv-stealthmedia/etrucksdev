@@ -106,6 +106,7 @@ top: 0;
 		line-height: 50px; // edit variables.less. This line height is what makes the submenu show below the navbar.
 		padding-top: 3rem;
 		padding-bottom: 3rem;
+		margin-bottom: 0;
 		// Add space to the nav items, except for last one
 		&:not(:last-of-type) {
 		  margin-right: @baseline*2;
@@ -143,7 +144,7 @@ top: 0;
 		  }
 
 		  a {
-			color: @secondary-color;
+			color: @secondary-color!important;
 		  }
 		}
 
@@ -172,22 +173,23 @@ top: 0;
 		  position: absolute;
 		  left: -24px;
 		  width: 100%;
-		  min-width: 165px; // Min width of the sub-nav
+		  min-width: 252px; // Min width of the sub-nav
 		  line-height: @baseline;
 		  margin-top: 0px;
 		  padding: 20px 0;
-		  color: @secondary-color;
-		  background: @light-color;
-		  .box-shadow();
+		  color: #2B3570;
+		  background: #EDF1F8 0% 0% no-repeat padding-box;
+		  box-shadow: 0px 10px 20px #00000029;
 		  text-align: left;
 		  list-style-type: none;
-
+		  top: 128px;
 		  li {
 			transition: @easing;
+			margin-bottom: 0;
 
 			a {
 			  display: block;
-			  padding: 10px 16px;
+			  padding: 1rem 25px;
 			  line-height: 1.3;
 			  text-transform: capitalize;
 			  transition: @easing;
@@ -402,67 +404,8 @@ top: 0;
 .header-primary.header-secondary {
   position: fixed !important;
   top: 0px !important;
-  padding: 10px 0px;
-
-  #site-branding {
-  }
-
-  #site-menu {
-
-	/* Main Menus / Upper-most Menu Links */
-	#main-menu {
-	  a {
-		//color: @secondary-color;
-
-		&:hover {
-		  //color: @primary-color !important;
-		}
-	  }
-
-	  & > li {
-		& > a {
-		  color: @secondary-color;
-		}
-
-		&:hover {
-		  color: @primary-color !important;
-		}
-	  }
-	}
-  }
-
-  .site-nav-button-container {
-	.nav-cta-btn {
-	  border: 2px solid @primary-color !important;
-	  color: @secondary-color !important;
-	  .transition();
-	}
-
-	.nav-cta-btn:hover {
-	  color: @white !important;
-	}
-
-	.btn-nav:hover, .btn-nav:active {
-
-	  .hamburger.is-active .hamburger-inner,
-	  .hamburger.is-active .hamburger-inner::before,
-	  .hamburger.is-active .hamburger-inner::after,
-	  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-		background-color: @secondary-color !important;
-	  }
-	}
-
-	.hamburger.is-active .hamburger-inner,
-	.hamburger.is-active .hamburger-inner::before,
-	.hamburger.is-active .hamburger-inner::after {
-	  background-color: @secondary-color !important;
-	}
-
-	.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-	  background-color: @secondary-color !important;
-	  transition-property: transform, background-color;
-	}
-  }
+  box-shadow: 0px 5px 20px #00000029;
+	transition: 1s ease-in;
 }
 .container-fluid{
   padding: 0;

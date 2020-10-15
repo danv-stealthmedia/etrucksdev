@@ -18,7 +18,7 @@
 <?php get_template_part("nav"); ?>
 	<main class="site-main" id="main">
 		<div class="background-primary pagetext">
-			<div id="etrucksrecentpostsCarousel" class="carousel carousel-fade paddingall pt-0" data-ride="carousel">
+			<div id="etrucksrecentpostsCarousel">
 				<?php echo do_shortcode('[etrucks-recentposts]'); ?>
 			</div>
 		</div>
@@ -41,8 +41,14 @@
 					<div class="col-lg-4 blog-posts"  data-aos="fade-up"
 							data-aos-duration="3000">
 						<div class="margin-div">
+
 						<a class="custom-blog-links" href="<?php the_permalink(); ?>">
-						<div class="post-image"><?php echo get_the_post_thumbnail($post->ID, 'medium'); ?></div>
+						<div class="post-image"><?php
+								$image = get_field('blog_image');
+							if( !empty( $image ) ): ?>
+							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+							<?php endif; ?>
+							</div>
 						<div class="post-title text-primary"><?php the_title(); ?></div>
 						<div class="post-date"><?php echo get_the_date(); ?></div>
 						</a>

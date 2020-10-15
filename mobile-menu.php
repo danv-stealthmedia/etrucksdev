@@ -4,34 +4,20 @@
 			<?php wp_nav_menu(['theme_location' => 'mobile', 'menu_id' => 'mobile-menu', 'depth' => 2]); ?>
 			<ul class="social-list">
 				<li class="social-item">
-					<a href="#" target="_blank" class="hvr-bob">
+					<a href="https://www.facebook.com/eTrucksIFTA/" target="_blank" class="hvr-bob">
 						<i class="fab fa-facebook-f"></i>
 					</a>
 				</li>
 				<li class="social-item">
-					<a href="#" target="_blank" class="hvr-bob">
-						<i class="fab fa-linkedin-in"></i>
-					</a>
-				</li>
-				<li class="social-item">
-					<a href="#" target="_blank" class="hvr-bob">
+					<a href="https://twitter.com/etrucksifta" target="_blank" class="hvr-bob">
 						<i class="fab fa-twitter"></i>
 					</a>
 				</li>
-				<li class="social-item">
-					<a href="#" target="_blank" class="hvr-bob">
-						<i class="fab fa-instagram"></i>
-					</a>
-				</li>
-				<li class="social-item">
-					<a href="#" target="_blank" class="hvr-bob">
-						<i class="fab fa-youtube"></i>
-					</a>
-				</li>
+
 			</ul>
 		</div>
 	</div>
 	<div class="menu-cta-button-container">
-		<a href="/web-design-contact/" class="btn btn-primary stealth-swipe">Book My Consultation</a>
+		<a href="/web-design-contact/" class="btn btn-primary stealth-swipe">31 DAY FREE TRIAL</a>
 	</div>
 </nav>

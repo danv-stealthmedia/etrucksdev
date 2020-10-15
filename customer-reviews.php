@@ -24,7 +24,8 @@
 					<p class="text-white">What Are People Saying About eTrucks?</p>
 					<a href="#reviews-main" class="review-link"><i class="fas fa-play"></i>Read more</a>
 				</div>
-				<div class="col-lg-6 circle" data-aos="fade-left"  data-aos-duration="3000"><div id="etrucksreviewsCarousel" class="carousel carousel-fade" data-ride="carousel">
+				<div class="col-lg-6 circle" data-aos="fade-left"  data-aos-duration="3000">
+					<div id="etrucksreviewsCarousel">
 						<?php echo do_shortcode('[etrucks-reviews]'); ?>
 					</div></div>
 			</div>

@@ -7612,10 +7612,12 @@
       // == Change Header on scroll ==
       scroll = $(window).scrollTop(); // set scroll amount (px)
 
-      if (scroll >= 60) {//header.addClass("header-secondary");// if scroll is further than #px change class
+      if (scroll >= 60) {
+        header.addClass("header-secondary"); // if scroll is further than #px change class
         // splashBox.css("z-index", -100);
-      } else {//header.removeClass("header-secondary"); // if not (is at top) change class back
-        }
+      } else {
+        header.removeClass("header-secondary"); // if not (is at top) change class back
+      }
     }); // == Change Header on scroll ==
 
     var scroll = scroll;
@@ -7722,17 +7724,13 @@
   mobileMenu(); // search();
   // fancyBoxYoututbe();
 
-  $('#etrucksrecentpostsCarousel').carousel({
-    //pause: true,
-    // interval: false
-    interval: 5000
-  });
-  $('#etrucksreviewsCarousel').carousel({
-    //pause: true,
-    // interval: false
-    interval: 5000
-  });
   AOS.init();
+  AOS.init({
+    disable: function () {
+      var maxWidth = 900;
+      return window.innerWidth < maxWidth;
+    }
+  });
 
   window.onload = function () {
     if ($('.feature--animated').length > 0) {
@@ -7776,6 +7774,46 @@
       autoplaySpeed: 5000,
       pauseOnHover: false
     });
-  }; // ** CLOSING / END DOCUMENT READY ************************************************************* \\
+  };
 
+  $('#howitworkscarousel').slick({
+    speed: 1750,
+    dots: true,
+    arrows: false,
+    centerMode: true,
+    autoplay: true,
+    fade: true
+  });
+  $('#etruckshomereviewsCarousel').slick({
+    speed: 1750,
+    dots: false,
+    arrows: false,
+    centerMode: true,
+    autoplay: true,
+    fade: true
+  });
+  $('#etrucksreviewsCarousel').slick({
+    speed: 1750,
+    dots: true,
+    arrows: false,
+    centerMode: true,
+    autoplay: true,
+    fade: true
+  });
+  $('#etrucksrecentpostsCarousel').slick({
+    speed: 1750,
+    dots: true,
+    arrows: false,
+    centerMode: true,
+    autoplay: true,
+    fade: true
+  });
+  $('#etruckshomenbanner').slick({
+    speed: 1750,
+    dots: false,
+    arrows: false,
+    centerMode: true,
+    autoplay: true,
+    fade: true
+  }); // ** CLOSING / END DOCUMENT READY ************************************************************* \\
 })(jQuery); // *********************************************************************************************** \\

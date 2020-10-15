@@ -24,7 +24,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<article class="single-page" id="post-<?php the_ID(); ?>">
 	<div class="custom-padding">
-						<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+						<?php 		$image = get_field('blog_image');
+							if( !empty( $image ) ): ?>
+								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+							<?php endif; ?>
 						<header class="entry-header">
 							<div class="post-date"><?php echo get_the_date(); ?></div>
 							<div class="post-title text-primary"><h1 class="text-blue"><?php the_title(); ?></h1></div>

@@ -10,22 +10,36 @@
   // A SPLASH is the first section seen on a page.
 
   .full-page(); // Makes this section fill the screen height and width. Will stretch if content is larger than screen height.
-
+  min-height: 90vh;
   color: @primary-color;
   font-weight: bold;
 
   h6, p {
 	font-size: 1.3rem;
 	color: @primary-color;
-	font-weight: bold;
+	font-weight: 800;
+	line-height: 1;
+	text-transform: initial;
+  }
+
+  p {
+	line-height: 1.8;
   }
 
   h5 {
 	font-size: 4rem;
 	color: @secondary-color;
 	font-weight: 900;
+	margin-bottom: 0;
   }
 
+  h3 {
+	font-size: 5rem;
+  }
+
+  .carousel {
+	min-height: auto;
+  }
 }
 
 #home-animation-example {
@@ -74,12 +88,39 @@
 .complywith {
   text-align: center;
 
+  p {
+	line-height: 1.8;
+	font-size: 15px;
+  }
+
   h6 {
 	color: @primary-color;
 	font-weight: bold;
 	text-align: center;
 	font-size: 1.5rem;
 	text-transform: initial;
+  }
+
+  .big-text {
+	font-weight: 900;
+	font-size: 4rem;
+	line-height: 1;
+	display: block;
+	margin: auto;
+	text-align: center;
+	max-width: 60%;
+
+	div {
+	  display: inline;
+	}
+
+	span {
+	  color: #c6383f;
+	  padding: 0 7px;
+	  font-weight: 100;
+	  display: inline-block;
+	}
+
   }
 
   img {
@@ -96,9 +137,11 @@
 #how-it-works {
   overflow: hidden;
   position: relative;
-svg{
-  max-width: 100%;
-}
+
+  img {
+	max-width: 100%;
+  }
+
   .blob-full {
 	content: "";
 	position: absolute !important;
@@ -114,26 +157,97 @@ svg{
 
   h3 {
 	color: @primary-color-light;
-	position: absolute;
-	width: 355px;
-	top: 22%;
+	position: relative;
+	top: 0;
+	padding-bottom: 20px;
   }
 
   h4 {
 	font-size: 2rem;
 	font-weight: bold;
 	color: #fff;
+	padding-bottom: 20px;
+  }
+
+  h5 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #fff;
+	text-transform: initial;
+	padding-bottom: 20px;
+  }
+
+  .slick-list {
+	.row {
+	  align-items: center;
+
+	  .col-lg-8 {
+		min-height: 800px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	  }
+
+	  .work-ul {
+		padding-left: 4rem;
+	  }
+
+	  .col-lg-4 {
+		min-height: 300px;
+	  }
+	}
+
+	ul {
+	  list-style: none;
+	  max-width: 50%;
+
+	  li {
+		color: #bac0e1;
+		padding-bottom: 5px;
+		margin-left: 2rem;
+		position: relative;
+
+		&:before {
+		  content: "";
+		  border-radius: 50%;
+		  display: inline-block;
+		  border: 5px solid #bac0e1;
+		  margin-left: -2rem;
+		  position: absolute;
+		  top: 9px;
+		}
+
+	  }
+	}
+
+	.col-lg-4 {
+	  ul {
+		max-width: 100%;
+		position: relative;
+
+		li {
+		  &:before {
+			border: 5px solid #fff;
+		  }
+		}
+	  }
+
+	  p {
+		font-weight: bold;
+		color: #FFFFFF;
+	  }
+	}
+
   }
 
   .carousel .carousel-item .row {
 	align-items: normal;
 
 	.col-lg-4:first-of-type {
-	  padding-top: 23%;
+	  //padding-top: 23%;
 	}
   }
 }
-
 
 .reviews-home {
   position: relative;
@@ -163,7 +277,7 @@ svg{
 	  font-weight: bold;
 	  font-size: 1.5rem;
 	  padding-bottom: 1rem;
-	  line-height: 1.3;
+	  line-height: 1;
 	  padding-top: 1rem;
 	  font-weight: 900;
 	  text-transform: initial;
@@ -173,20 +287,25 @@ svg{
 	  margin-top: 2rem;
 	}
 
-
+	p {
+	  line-height: 1.8;
+	}
   }
+
   svg#esxmtmjdocr1 {
 	width: 30%;
 	position: absolute;
 	bottom: -131px;
 	left: 24rem;
   }
-  svg#ei33lcx4lv571{
+
+  svg#ei33lcx4lv571 {
 	width: 30%;
 	position: absolute;
 	bottom: -131px;
 	right: 24rem;
   }
+
   .carousel .carousel-item {
 	.review-content {
 	  p {
@@ -197,10 +316,50 @@ svg{
   }
 }
 
-#etruckshomereviewsCarousel {
- 	min-height: 60vh;
+#howitworkscarousel {
+  .carousel {
+	min-height: auto;
+  }
 
-  .carousel-item {
+  .carousel-inner {
+	min-height: 70vh;
+	display: flex;
+	align-items: center;
+  }
+
+  .slick-dots {
+	bottom: auto;
+	top: 25%;
+	right: 1rem;
+	position: absolute;
+	list-style: none;
+
+	li {
+	  margin-bottom: 10px;
+
+	  button {
+		font-size: 0;
+		border-radius: 50%;
+		background: #ffff;
+		padding: 6px;
+		box-shadow: none;
+		border: 0;
+	  }
+
+	  &.slick-active, &:hover {
+		button {
+		  background: #C6383F;
+		}
+	  }
+	}
+  }
+
+}
+
+#etruckshomereviewsCarousel {
+  min-height: 60vh;
+
+  .slick-slide {
 	.customer-name {
 	  padding-bottom: 12px;
 	}
@@ -211,8 +370,9 @@ svg{
 	  p {
 		font-size: 2rem;
 		font-weight: 900;
-		line-height: 1.3;
+		line-height: 1.1;
 		margin-bottom: 0;
+		color: @primary-color;
 	  }
 
 	  p.company-name {
@@ -241,7 +401,170 @@ a#topVideoShow {
   }
 
 }
-.feature--report.is--hit{
+
+@media (max-width: 1200px) {
+  .btn {
+	padding: 0 15px !important;
+	font-size: 14px !important;
+  }
+
+  #home-splash {
+	.row:first-of-type {
+	  flex-direction: column-reverse;
+	}
+
+	a#topVideoShow {
+	  top: 1rem;
+	  right: 0;
+
+	  svg {
+		width: 45px;
+	  }
+
+	  &:after {
+		top: 103px;
+
+	  }
+	}
+
+	h5, h3 {
+	  font-size: 3rem;
+	}
+
+	.col-xl-5 {
+	  padding: 0;
+	}
+  }
+
+  .complywith {
+	padding-top: 5.75rem !important;
+
+	.big-text {
+	  font-size: 1.3rem;
+	  max-width: 100%;
+	}
+
+	h6 {
+	  line-height: 1.2 !important;
+	  padding-bottom: 20px;
+	}
+  }
+
+  #how-it-works {
+	.blob-full {
+	  display: none;
+	}
+
+	.slick-dots {
+	   top: auto;
+	  right: 0;
+	  left: 0;
+	  margin: 0;
+	  flex-direction: row;
+	  display: flex !important;
+
+	  li {
+
+	  }
+	}
+
+	.row {
+
+	  h3 {
+		font-size: 3rem;
+		position: relative;
+		width: auto;
+		top: 0;
+		padding-bottom: 20px;
+	  }
+
+	}
+
+	.slick-list {
+	  float: none;
+	  width: 100%;
+	  margin-right: 0;
+
+	  .row {
+		.col-lg-4 {
+		  min-height: auto;
+
+		  ul {
+			position: relative;
+			bottom: 0;
+		  }
+
+		  .work-ul {
+			padding-left: 0;
+		  }
+		}
+
+		.col-lg-8 {
+		  min-height: auto;
+
+		  .work-ul {
+			padding-left: 0;
+
+		  }
+		}
+
+		svg {
+		  height: auto;
+		}
+
+		ul {
+		  max-width: 100%;
+		}
+	  }
+
+	}
+  }
+
+  .reviews-home {
+	max-width: 100vw;
+	overflow: hidden;
+
+	.price {
+	  position: relative;
+	  top: 0;
+	  max-width: 100%;
+	  margin-bottom: 10rem;
+	}
+
+	svg#ei33lcx4lv571 {
+	  width: 80%;
+	  position: absolute;
+	  bottom: 0;
+	  right: 19rem;
+	}
+
+	svg#esxmtmjdocr1 {
+	  width: 80%;
+	  position: absolute;
+	  bottom: 0;
+	  left: 15rem;
+	}
+  }
+
+  #etruckshomereviewsCarousel {
+	position: relative;
+
+	&:before {
+	  content: url(/wp-content/themes/understrap/css/images/what-is-ifta-icon-quote-grey.svg);
+	  position: absolute;
+	  right: 0;
+	  top: -8rem;
+	  left: 0;
+	  text-align: center;
+	}
+
+	.slick-slide .review-content {
+	  width: auto;
+	}
+  }
+}
+
+.feature--report.is--hit {
   #e505taxblrfd14_to {
 	animation: e505taxblrfd14_to__to 2000ms linear 1 normal forwards;
   }
@@ -278,31 +601,40 @@ a#topVideoShow {
 	animation: e505taxblrfd4__m 2000ms linear 1 normal forwards;
   }
 }
-.col-lg-4.protection{
+
+.col-lg-4.protection {
   &:hover #eo3y1vscop8m3_to {
 	animation: eo3y1vscop8m3_to__to 2000ms linear 1s normal forwards;
   }
+
   &:hover #eo3y1vscop8m8 {animation: eo3y1vscop8m8__m 2000ms linear 1s normal forwards;}
+
   &:hover #eo3y1vscop8m6 {animation: eo3y1vscop8m6_c_o 2000ms linear 1s normal forwards;}
 
   &:hover #eo3y1vscop8m7 {
 	animation: eo3y1vscop8m7__m 2000ms linear 1s normal forwards;
   }
 }
+
 .feature--protection.is--hit {
   #eo3y1vscop8m3_to {
-	animation: eo3y1vscop8m3_to__to 2000ms linear 1s normal forwards;
+	animation: eo3y1vscop8m3_to__to 2000ms linear 1 normal forwards;
   }
-  #eo3y1vscop8m8 {animation: eo3y1vscop8m8__m 2000ms linear 1s normal forwards;}
-  #eo3y1vscop8m6 {animation: eo3y1vscop8m6_c_o 2000ms linear 1s normal forwards}
+
+  #eo3y1vscop8m6 {
+	animation: eo3y1vscop8m6_c_o 2000ms linear 1 normal forwards;
+  }
 
   #eo3y1vscop8m7 {
-	animation: eo3y1vscop8m7__m 2000ms linear 1s normal forwards;
+	animation: eo3y1vscop8m7__m 2000ms linear 1 normal forwards;
+  }
+
+  #eo3y1vscop8m8 {
+	animation: eo3y1vscop8m8__m 2000ms linear 1 normal forwards;
   }
 }
 
-
-.report{
+.report {
   &:hover #e505taxblrfd14_to {
 	animation: e505taxblrfd14_to__to 2000ms linear 1 normal forwards;
   }
@@ -339,44 +671,43 @@ a#topVideoShow {
 	animation: e505taxblrfd4__m 2000ms linear 1 normal forwards;
   }
 }
+
 .feature--clock.is--hit {
   #eyowi2lr252q2_to {
-	animation: eyowi2lr252q2_to__to 2000ms linear 1 normal forwards
+	animation: eyowi2lr252q2_to__to 2000ms linear 1 normal forwards;
   }
 
   #eyowi2lr252q8_tr {
-	animation: eyowi2lr252q8_tr__tr 2000ms linear 1 normal forwards
+	animation: eyowi2lr252q8_tr__tr 2000ms linear 1 normal forwards;
   }
 
   #eyowi2lr252q12_tr {
-	animation: eyowi2lr252q12_tr__tr 2000ms linear 1 normal forwards
+	animation: eyowi2lr252q12_tr__tr 2000ms linear 1 normal forwards;
   }
 }
 
 .clock {
   &:hover #eyowi2lr252q2_to {
-	animation: eyowi2lr252q2_to__to 2000ms linear 1 normal forwards
+	animation: eyowi2lr252q2_to__to 2000ms linear 1 normal forwards;
   }
 
   &:hover #eyowi2lr252q8_tr {
-	animation: eyowi2lr252q8_tr__tr 2000ms linear 1 normal forwards
+	animation: eyowi2lr252q8_tr__tr 2000ms linear 1 normal forwards;
   }
 
   &:hover #eyowi2lr252q12_tr {
-	animation: eyowi2lr252q12_tr__tr 2000ms linear 1 normal forwards
+	animation: eyowi2lr252q12_tr__tr 2000ms linear 1 normal forwards;
   }
 }
-
-
 
 #e6gfx04o14q91:hover #e6gfx04o14q93_ts {
   animation: e6gfx04o14q93_ts__ts 500ms linear 1 normal forwards;}
 
-
-.svg--badge,.svg-report,.svg-clock{
+.svg--badge, .svg-report, .svg-clock {
 
   height: 150px;
 }
+
 .feature--truck-price.is--hit {
   #esxmtmjdocr3_to {
 	animation: esxmtmjdocr3_to__to 2000ms linear 1 normal forwards;
@@ -394,10 +725,11 @@ a#topVideoShow {
 	animation: ei33lcx4lv5716_to__to 2000ms linear 1 normal forwards;
   }
 
-#ei33lcx4lv5716 {
+  #ei33lcx4lv5716 {
 	animation: ei33lcx4lv5716_c_o 2000ms linear 1 normal forwards
   }
-#ei33lcx4lv5768_to {
+
+  #ei33lcx4lv5768_to {
 	animation: ei33lcx4lv5768_to__to 2000ms linear 1 normal forwards
   }
 
@@ -498,7 +830,8 @@ a#topVideoShow {
 	filter: url(#a);
   }
 }
-.mileage-svg{
+
+.mileage-svg {
   .a {
 	fill: #f6f6f6;
   }
@@ -584,7 +917,8 @@ a#topVideoShow {
 	filter: url(#a);
   }
 }
-.fuel-svg{
+
+.fuel-svg {
   .a {
 	fill: #f6f6f6;
   }
@@ -670,19 +1004,142 @@ a#topVideoShow {
 	filter: url(#a);
   }
 }
-#how-it-works2{
-  .a{fill:#f6f6f6;}.b{fill:#fbfbfb;stroke:#dcdcdc;}.c{fill:#ededed;stroke:#d0d0d0;}.d{clip-path:url(#c);}.e,.n{fill:#fff;}.f,.j{fill:#c6383f;}.g,.i,.l,.m,.o,.p{fill:#2b3570;}.h,.k{fill:#333;}.h{font-size:17px;}.h,.i,.j,.k,.n{font-family:Montserrat-Bold,
-Montserrat;font-weight:700;}.i,.j,.n,.o{font-size:8px;}.k{font-size:6px;}.l,.m,.o,.p{font-family:Montserrat-Regular,
-Montserrat;}.l{font-weight:400;}.m{font-size:7px;}.p{font-size:9px;}.q{fill:#c8c8c8;}.r{stroke:none;}.s{fill:none;}.t{filter:url(#a2);}
-}
-#how-it-works3{
-  .a{fill:#f6f6f6;}.b{fill:#fbfbfb;stroke:#dcdcdc;}.c{fill:#ededed;stroke:#d0d0d0;}.d{clip-path:url(#c);}.e,.n{fill:#fff;}.f,.j{fill:#c6383f;}.g,.i,.l,.m,.o,.p{fill:#2b3570;}.h,.k{fill:#333;}.h{font-size:17px;}.h,.i,.j,.k,.n{font-family:Montserrat-Bold,
-Montserrat;font-weight:700;}.i,.j,.n,.o{font-size:8px;}.k{font-size:6px;}.l,.m,.o,.p{font-family:Montserrat-Regular,
-Montserrat;}.l{font-weight:400;}.m{font-size:7px;}.p{font-size:9px;}.q{fill:#c8c8c8;}.r{stroke:none;}.s{fill:none;}.t{filter:url(#a);}
+
+#how-it-works2 {
+  .a {fill: #f6f6f6;}
+
+  .b {fill: #fbfbfb;stroke: #dcdcdc;}
+
+  .c {fill: #ededed;stroke: #d0d0d0;}
+
+  .d {clip-path: url(#c);}
+
+  .e, .n {fill: #fff;}
+
+  .f, .j {fill: #c6383f;}
+
+  .g, .i, .l, .m, .o, .p {fill: #2b3570;}
+
+  .h, .k {fill: #333;}
+
+  .h {font-size: 17px;}
+
+  .h, .i, .j, .k, .n {font-family: Montserrat-Bold,
+  Montserrat;font-weight: 700;}
+
+  .i, .j, .n, .o {font-size: 8px;}
+
+  .k {font-size: 6px;}
+
+  .l, .m, .o, .p {font-family: Montserrat-Regular,
+  Montserrat;}
+
+  .l {font-weight: 400;}
+
+  .m {font-size: 7px;}
+
+  .p {font-size: 9px;}
+
+  .q {fill: #c8c8c8;}
+
+  .r {stroke: none;}
+
+  .s {fill: none;}
+
+  .t {filter: url(#a2);}
 }
 
-#how-it-works1{
-  .a{fill:#f6f6f6;}.b{fill:#fbfbfb;stroke:#dcdcdc;}.c{fill:#ededed;stroke:#d0d0d0;}.d{clip-path:url(#c);}.e,.n{fill:#fff;}.f,.j{fill:#c6383f;}.g,.i,.l,.m,.o{fill:#2b3570;}.h,.k{fill:#333;}.h{font-size:17px;}.h,.i,.j,.k,.n{font-family:Montserrat-Bold,
-Montserrat;font-weight:700;}.i,.j,.o{font-size:8px;}.k{font-size:6px;}.l,.m,.o{font-family:Montserrat-Regular,
-Montserrat;}.l{font-weight:400;}.m,.n{font-size:7px;}.p{fill:#c8c8c8;}.q{stroke:none;}.r{fill:none;}.s{filter:url(#a);}
+#how-it-works3 {
+  .a {fill: #f6f6f6;}
+
+  .b {fill: #fbfbfb;stroke: #dcdcdc;}
+
+  .c {fill: #ededed;stroke: #d0d0d0;}
+
+  .d {clip-path: url(#c);}
+
+  .e, .n {fill: #fff;}
+
+  .f, .j {fill: #c6383f;}
+
+  .g, .i, .l, .m, .o, .p {fill: #2b3570;}
+
+  .h, .k {fill: #333;}
+
+  .h {font-size: 17px;}
+
+  .h, .i, .j, .k, .n {font-family: Montserrat-Bold,
+  Montserrat;font-weight: 700;}
+
+  .i, .j, .n, .o {font-size: 8px;}
+
+  .k {font-size: 6px;}
+
+  .l, .m, .o, .p {font-family: Montserrat-Regular,
+  Montserrat;}
+
+  .l {font-weight: 400;}
+
+  .m {font-size: 7px;}
+
+  .p {font-size: 9px;}
+
+  .q {fill: #c8c8c8;}
+
+  .r {stroke: none;}
+
+  .s {fill: none;}
+
+  .t {filter: url(#a);}
+}
+
+#how-it-works1 {
+  .a {fill: #f6f6f6;}
+
+  .b {fill: #fbfbfb;stroke: #dcdcdc;}
+
+  .c {fill: #ededed;stroke: #d0d0d0;}
+
+  .d {clip-path: url(#c);}
+
+  .e, .n {fill: #fff;}
+
+  .f, .j {fill: #c6383f;}
+
+  .g, .i, .l, .m, .o {fill: #2b3570;}
+
+  .h, .k {fill: #333;}
+
+  .h {font-size: 17px;}
+
+  .h, .i, .j, .k, .n {font-family: Montserrat-Bold,
+  Montserrat;font-weight: 700;}
+
+  .i, .j, .o {font-size: 8px;}
+
+  .k {font-size: 6px;}
+
+  .l, .m, .o {font-family: Montserrat-Regular,
+  Montserrat;}
+
+  .l {font-weight: 400;}
+
+  .m, .n {font-size: 7px;}
+
+  .p {fill: #c8c8c8;}
+
+  .q {stroke: none;}
+
+  .r {fill: none;}
+
+  .s {filter: url(#a);}
+}
+
+.slick-slide {
+  opacity: 0;
+  transition: opacity 1.25s ease-out !important;
+}
+
+.slick-slide.slick-current {
+  opacity: 1 !important;
 }
