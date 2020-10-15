@@ -145,14 +145,13 @@
   .blob-full {
 	content: "";
 	position: absolute !important;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%) translateZ(0) !important;
 	background: #262F64;
-	border-radius: 50%;
-	height: 163%;
-	top: -36%;
-	margin: 0 5%;
+	border-radius: 100%;
+	height: calc(1920px - 10vh);
+	width: calc(1920px - 10vh);
+	top: 50%;
   }
 
   h3 {
