@@ -273,7 +273,7 @@
 					if( el.getBoundingClientRect().top - LastPos <= 500 ){
 						el.classList.add('is--hit');
 					}else{
-						el.classList.remove('is--hit');
+						//el.classList.remove('is--hit');
 					}
 				});
 			});

@@ -7745,8 +7745,7 @@
         Array.from(featureAnimatedScroll).forEach(function (el, i) {
           if (el.getBoundingClientRect().top - LastPos <= 500) {
             el.classList.add('is--hit');
-          } else {
-            el.classList.remove('is--hit');
+          } else {//el.classList.remove('is--hit');
           }
         });
       });

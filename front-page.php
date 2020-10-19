@@ -18,7 +18,7 @@
 	<section id="home-splash">
 		<div class="container">
 			<div class="row paddingall align-items-center pb-0 position-relative">
-				<div class="col-xl-4">
+				<div class="col-xl-5">
 					<div id="etruckshomenbanner">
 						<div class="slick-slide">
 							<h6>eTrucks Is...</h6>
@@ -43,7 +43,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-8">
+				<div class="col-xl-7">
 					<div class="slider--wrapper">
 						<svg class="svg--circle" xmlns="http://www.w3.org/2000/svg" width="1131.371" height="1131.371"
 								viewBox="0 0 1131.371 1131.371">
