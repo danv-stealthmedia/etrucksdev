@@ -1,9 +1,9 @@
-/***********************************************************************/
-/*********** HOME PAGE / FRONT PAGE ************************************/
-/***********************************************************************/
+  /***********************************************************************/
+  /*********** HOME PAGE / FRONT PAGE ************************************/
+  /***********************************************************************/
 
-// ** LESS STYLING EXAMPLES ** [Delete when beginning project] -----------------------------------------------
-// See variables.less, mixins.less, typography.less, ui.less for global less styles. Adjust these files first so you can use them throughout your content styles
+  // ** LESS STYLING EXAMPLES ** [Delete when beginning project] -----------------------------------------------
+  // See variables.less, mixins.less, typography.less, ui.less for global less styles. Adjust these files first so you can use them throughout your content styles
 
 #home-splash { // Name each section using a unique id. This makes it easier to target elements. Format can follow #[page-name]-[section-name]
 
@@ -32,9 +32,12 @@
 	font-weight: 900;
 	margin-bottom: 0;
   }
-
+.col-lg-4{
+  padding: 0;
+}
   h3 {
-	font-size: 5rem;
+	font-size: 4.9rem;
+	word-break: break-word;
   }
 
   .carousel {
@@ -142,17 +145,18 @@
 	max-width: 100%;
   }
 
-  .blob-full {
+	.blob-full {
 	content: "";
 	position: absolute !important;
 	left: 50%;
+	top: 50%;
 	transform: translateX(-50%) translateY(-50%) translateZ(0) !important;
 	background: #262F64;
 	border-radius: 100%;
-	height: calc(1920px - 10vh);
-	width: calc(1920px - 10vh);
-	top: 50%;
-  }
+	height: 140vh;
+	width: 140vh;
+
+	}
 
   h3 {
 	color: @primary-color-light;
@@ -334,7 +338,6 @@
 	list-style: none;
 
 	li {
-	  margin-bottom: 10px;
 
 	  button {
 		font-size: 0;
@@ -408,6 +411,10 @@ a#topVideoShow {
   }
 
   #home-splash {
+	min-height: auto;
+	h3{
+
+	}
 	.row:first-of-type {
 	  flex-direction: column-reverse;
 	}
@@ -455,16 +462,16 @@ a#topVideoShow {
 	}
 
 	.slick-dots {
-	   top: auto;
+	  top: auto;
 	  right: 0;
 	  left: 0;
 	  margin: 0;
 	  flex-direction: row;
 	  display: flex !important;
-
-	  li {
-
-	  }
+	  justify-content: center;
+li{
+  margin: 5px;
+}
 	}
 
 	.row {
@@ -501,12 +508,12 @@ a#topVideoShow {
 		.col-lg-8 {
 		  min-height: auto;
 
-		  .work-ul {
-			padding-left: 0;
-
-		  }
 		}
 
+		.work-ul {
+		  padding-left: 0;
+
+		}
 		svg {
 		  height: auto;
 		}

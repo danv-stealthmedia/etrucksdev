@@ -6,15 +6,15 @@
 /*==== SITE COLORS ====================================================*/
 /***********************************************************************/
 /* Primary Color */
-@primary-color:#2B3570;
+@primary-color: #2B3570;
 @primary-color-light: #4A579E;
 @primary-color-dark: #2B3570;
 
 /* Secondary Color */
 @secondary-color: #C6383F;
-@secondary-color-light:#c13f45;
-@secondary-color-dark:#c6383f;
-@grid-gutter-width:0px;
+@secondary-color-light: #c13f45;
+@secondary-color-dark: #c6383f;
+@grid-gutter-width: 0px;
 /* Accent Color */
 @accent-color: #DE2B34;
 @accent-color-light: #DE2B34;
@@ -81,7 +81,6 @@
 @red-light: #ed6c63;
 @red-dark: #bb2011;
 
-
 /***********************************************************************/
 /*==== TYPOGRAPHY =====================================================*/
 /***********************************************************************/
@@ -109,8 +108,6 @@
 @font-normal: 300;
 @font-bold: 700;
 
-
-
 /***********************************************************************/
 /*==== PAGE MEASUREMENTS ==============================================*/
 /***********************************************************************/
@@ -129,50 +126,100 @@
   padding: 0;
   margin: 0;
 }
-.col-md{
+
+.col-md {
   padding: 0;
 }
-.row{
+
+.row {
   margin: 0;
 }
-.paddingall{
+
+.paddingall {
   padding-top: 7rem;
   padding-bottom: 7rem;
   padding-left: 8%;
   padding-right: 8%;
 }
-.paddingleftright{
+
+.paddingleftright {
   padding-left: 8%;
   padding-right: 8%;
 }
-.paddingright{
+
+.paddingright {
   padding-right: 8%;
 }
-.paddingtopbottom{
+
+.paddingtopbottom {
   padding-top: 5.75rem;
   padding-bottom: 5.75rem;
 }
-.paddingbottom{
+
+.paddingbottom {
   padding-bottom: 5.75rem;
 }
 
-.custom-width{
+.custom-width {
   max-width: 50%;
   margin: auto;
   display: block;
 
 }
-.text-primary{
-  color: @primary-color!important;
+
+.text-primary {
+  color: @primary-color !important;
 }
-.text-grey{
-  color:#D4D9E8;
+
+.text-grey {
+  color: #D4D9E8;
 }
-.background-primary{
-  background-color:#2B3570;
+
+.background-primary {
+  background-color: #2B3570;
   color: #ffffff;
 
 }
-.header-margin-bottom{
+
+.header-margin-bottom {
   margin-bottom: 3rem;
+}
+
+@media (max-width: 1500px) {
+  .paddingall {
+	padding-left: 6%;
+	padding-right: 6%;
+  }
+
+  .paddingleftright {
+	padding-left: 6%;
+	padding-right: 6%;
+  }
+
+  .paddingright {
+	padding-right: 6%;
+  }
+
+  .paddingleft {
+	padding-left: 6%;
+  }
+}
+@media (max-width: 720px){
+.paddingall {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.paddingleftright {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.paddingright {
+  padding-right: 2rem;
+}
+
+.paddingleft {
+  padding-left: 2rem;
+}
 }
