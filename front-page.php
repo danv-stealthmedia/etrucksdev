@@ -25,21 +25,21 @@
 							<h5>THE</h5>
 							<h3>FASTEST...</h3>
 							<p>IFTA Software and Trucking Compliance Tool</p>
-							<a class="btn btn-secondary" href="/31-day-free-trial/">START YOUR FREE 31 DAY TRIAL</a>
+							<a class="btn btn-secondary" href="https://app.etrucks.com/signup">START YOUR FREE 31 DAY TRIAL</a>
 						</div>
 						<div class="slick-slide">
 							<h6>eTrucks Is...</h6>
 							<h5>THE MOST</h5>
 							<h3>ACCURATE...</h3>
 							<p>IFTA Software and Trucking Compliance Tool</p>
-							<a class="btn btn-secondary" href="/31-day-free-trial/">START YOUR FREE 31 DAY TRIAL</a>
+							<a class="btn btn-secondary" href="https://app.etrucks.com/signup">START YOUR FREE 31 DAY TRIAL</a>
 						</div>
 						<div class="slick-slide">
 							<h6>eTrucks Is...</h6>
 							<h5>THE EASIEST</h5>
 							<h3>TO USE...</h3>
 							<p>IFTA Software and Trucking Compliance Tool</p>
-							<a class="btn btn-secondary" href="/31-day-free-trial/">START YOUR FREE 31 DAY TRIAL</a>
+							<a class="btn btn-secondary" href="https://app.etrucks.com/signup">START YOUR FREE 31 DAY TRIAL</a>
 						</div>
 					</div>
 				</div>
@@ -5179,7 +5179,7 @@
 				</div>
 			</div>
 		</div>
-		<a class="btn btn-secondary" href="/31-day-free-trial/">START YOUR
+		<a class="btn btn-secondary" href="https://app.etrucks.com/signup">START YOUR
 			FREE 31 DAY TRIAL</a>
 
 	</div>
@@ -6077,7 +6077,7 @@
 										fill="rgb(74,96,188)" stroke="none" stroke-width="1"/>
 								<g id="ei33lcx4lv5772" transform="matrix(1 0 0 1 29.72500000000000 8.52200000000000)">
 									<path id="ei33lcx4lv5773"
-											d="M706.215502,445.683359C703.323217,446.504314,701.324367,448.368907,699.707309,450.903547L690.650000,464.165000L699.477000,468.789000L708.535309,455.527547C709.805117,453.633988,711.530238,452.089735,713.552309,451.036547C715.626586,449.892585,718.122056,449.806406,720.270309,450.804547L713.098807,446.962273C712.143833,446.376823,711.119159,445.913536,710.048807,445.583273C708.957073,445.341104,708.242911,445.311710,707.030353,445.454182Z"
+											d="M735.932000,403.074000C733.039715,403.894955,730.549058,405.748360,728.932000,408.283000L690.650000,464.165000L699.477000,468.789000L737.760000,412.907000C739.029808,411.013441,740.754928,409.469188,742.777000,408.416000C744.851277,407.272038,747.346747,407.185859,749.495000,408.184000L742.295000,404.411000C741.340026,403.825550,740.315352,403.362263,739.245000,403.032000C738.153266,402.789831,737.020238,402.804208,735.935000,403.074000Z"
 											transform="matrix(1 0 0 1 -659.28300000000002 -402.85899999999998)"
 											fill="rgb(230,85,92)" stroke="none" stroke-width="1"/>
 									<path id="ei33lcx4lv5774"
@@ -6087,7 +6087,7 @@
 									<g id="ei33lcx4lv5775"
 											transform="matrix(1 0 0 1 8.82600000000000 4.62100000000000)">
 										<path id="ei33lcx4lv5776"
-												d="M633.502098,467.155107C635.688789,466.369542,638.127199,466.786948,639.928098,468.255107C643.471098,471.267107,643.456098,477.923107,639.896098,483.120107L624.489778,505.515444C622.968090,507.872185,620.701882,509.652275,618.051778,510.572444C615.865343,511.357221,613.427622,510.939868,611.626778,509.472444L589.386778,490.572444C585.844778,487.561444,585.858778,480.905444,589.418778,475.708444C590.941180,473.351947,593.207604,471.571966,595.857778,470.651444C598.044576,469.867103,600.482370,470.284403,602.283778,471.751444L618.106778,485.201444L627.062098,472.219107C628.583477,469.859714,630.850451,468.077112,633.502098,467.155107Z"
+												d="M662.678000,424.559000C664.864691,423.773435,667.303100,424.190841,669.104000,425.659000C672.647000,428.671000,672.632000,435.327000,669.072000,440.524000L624.338000,505.819000C622.816312,508.175741,620.550104,509.955831,617.900000,510.876000C615.713565,511.660777,613.275844,511.243424,611.475000,509.776000L589.235000,490.876000C585.693000,487.865000,585.707000,481.209000,589.267000,476.012000C590.789402,473.655503,593.055826,471.875522,595.706000,470.955000C597.892798,470.170659,600.330592,470.587959,602.132000,472.055000L617.955000,485.505000L656.238000,429.623000C657.759378,427.263607,660.026353,425.481005,662.678000,424.559000Z"
 												transform="matrix(1 0 0 1 -586.58699999999999 -424.19099999999997)"
 												fill="rgb(198,56,63)" stroke="none" stroke-width="1"/>
 									</g>
@@ -6112,7 +6112,7 @@
 				<p>Why? Because we know that it will help you so much that once you try it, you won't be able to
 					live
 					without it again.</p>
-				<a class="btn btn-secondary" href="/31-day-free-trial/">START YOUR
+				<a class="btn btn-secondary" href="https://app.etrucks.com/signup">START YOUR
 					FREE 31 DAY TRIAL</a>
 			</div>
 <!--			<div id="etruckshomereviewsCarousel" class="carousel carousel-fade" data-ride="carousel">-->

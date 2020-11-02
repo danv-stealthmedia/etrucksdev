@@ -190,6 +190,10 @@ p{
 .pagetext{
   padding-top: 100px;
   position: relative;
+
+  .page-template-single-template-php & {
+  	//padding-top: 0;
+  }
 }
 .btn{
   font-weight: bold;
@@ -202,7 +206,36 @@ p{
 h3{
   font-size: 5rem;
   font-weight: 900;
+
+  .page-template-single-template-php & {
+  	font-size: 36px;
+  	line-height: 1;
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    text-transform: none;
+  }
 }
+
+h2 {
+	.page-template-single-template-php & {
+		font-family: trumpgothicpro,sans-serif;
+		font-size: 36px;
+		font-weight: 900;
+		text-transform: uppercase;
+		margin-bottom: 50px;
+	}
+}
+
+.page-template-single-template-php {
+	p + h2 {
+		margin-top: 80px;
+	}
+
+	p + h3 {
+		margin-top: 50px;
+	}
+}
+
 .blob {
   width: calc(2560px * 2);
   height: calc(2560px * 2);
